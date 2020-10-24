@@ -14,8 +14,7 @@ namespace ClientCFC_P4_116
         static void Main(string[] args)
         {
             BasicHttpBinding bind = new BasicHttpBinding();
-            ChannelFactory<IMatematika> objChannel = new
-           ChannelFactory<IMatematika>(bind, "http://localhost:7777");
+            ChannelFactory<IMatematika> objChannel = new ChannelFactory<IMatematika>(bind, "http://localhost:7777");
             IMatematika obj = objChannel.CreateChannel();
             double hasilTambah = obj.Tambah(1, 2);
             Console.WriteLine("1 + 2 = " + hasilTambah);
